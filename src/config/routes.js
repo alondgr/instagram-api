@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const usersController = require('../controllers/users.controllers');
 const postsController = require('../controllers/posts.controller');
-// const upload = multer({ dest: 'public/' })
 const jwt = require('jsonwebtoken')
 const multer = require('multer')
 const storage = multer.diskStorage({
