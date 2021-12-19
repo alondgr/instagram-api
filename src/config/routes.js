@@ -34,7 +34,7 @@ const auth = (req, res, next) => {
 router.post('/post/:id/like', auth, postsController.like);
 router.post('/post/:id/unlike', auth, postsController.unLike);
 router.post('/post/:id/comment', auth, postsController.createComment);
-router.post('/post/:id/comment', auth, postsController.getComments);
+router.get('/post/:id/comment', auth, postsController.getComments);
 
 router.get('/post/:id', auth, postsController.getOne);
 router.post('/post', auth, upload.single('image'), postsController.create);
